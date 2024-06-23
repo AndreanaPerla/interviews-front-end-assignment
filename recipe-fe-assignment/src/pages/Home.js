@@ -1,13 +1,18 @@
 import Recipes from "../components/Recipes";
+import styled from "styled-components";
 
 import React from "react";
 
 function Home() {
   return (
-    <div>
+    <Wrapper>
       <Recipes />
-    </div>
+    </Wrapper>
   );
 }
+
+const Wrapper = styled.div`
+  margin: 3rem;
+`;
 
 export default Home;

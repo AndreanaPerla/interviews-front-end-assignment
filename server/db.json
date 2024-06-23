@@ -14,7 +14,7 @@
       "cuisineId": "1",
       "dietId": "3",
       "difficultyId": "3",
-      "image": "/uploads/carbonara-horizontal-square640-v2.jpg"
+      "image": "http://localhost:8080/uploads/carbonara-horizontal-square640-v2.jpg"
     },
     {
       "id": "2",
@@ -30,7 +30,7 @@
       "cuisineId": "1",
       "dietId": "1",
       "difficultyId": "2",
-      "image": "/uploads/Margherita-9920.webp"
+      "image": "http://localhost:8080/uploads/Margherita-9920.webp"
     },
     {
       "id": "3",
@@ -46,7 +46,7 @@
       "cuisineId": "1",
       "dietId": "3",
       "difficultyId": "2",
-      "image": "/uploads/tiramisu.jpg"
+      "image": "http://localhost:8080/uploads/tiramisu.jpg"
     },
     {
       "id": "4",
@@ -62,7 +62,7 @@
       "cuisineId": "2",
       "dietId": "2",
       "difficultyId": "1",
-      "image": "/uploads/Caesar-Salad.webp"
+      "image": "http://localhost:8080/uploads/Caesar-Salad.webp"
     },
     {
       "id": "5",
@@ -78,7 +78,7 @@
       "cuisineId": "3",
       "dietId": "2",
       "difficultyId": "1",
-      "image": "/uploads/Beef-Tacos.jpg"
+      "image": "http://localhost:8080/uploads/Beef-Tacos.jpg"
     },
     {
       "id": "6",
@@ -94,39 +94,27 @@
       "cuisineId": "4",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/46822-indian-chicken-curry.jpg"
+      "image": "http://localhost:8080/uploads/46822-indian-chicken-curry.jpg"
     },
     {
       "id": "7",
       "name": "Sushi Rolls",
-      "ingredients": [
-        "Sushi Rice",
-        "Nori",
-        "Fish",
-        "Cucumber",
-        "Avocado"
-      ],
+      "ingredients": ["Sushi Rice", "Nori", "Fish", "Cucumber", "Avocado"],
       "instructions": "Spread rice on nori. Add fillings. Roll and slice.",
       "cuisineId": "5",
       "dietId": "2",
       "difficultyId": "3",
-      "image": "/uploads/Sushi-Rolls-Maki-Sushi-–-Hosomaki-1106-II.jpg"
+      "image": "http://localhost:8080/uploads/Sushi-Rolls-Maki-Sushi-–-Hosomaki-1106-II.jpg"
     },
     {
       "id": "8",
       "name": "Paella",
-      "ingredients": [
-        "Rice",
-        "Saffron",
-        "Seafood",
-        "Bell Peppers",
-        "Peas"
-      ],
+      "ingredients": ["Rice", "Saffron", "Seafood", "Bell Peppers", "Peas"],
       "instructions": "Cook rice with saffron. Add seafood and vegetables. Simmer until done.",
       "cuisineId": "6",
       "dietId": "2",
       "difficultyId": "3",
-      "image": "/uploads/Paella.webp"
+      "image": "http://localhost:8080/uploads/Paella.webp"
     },
     {
       "id": "9",
@@ -142,7 +130,7 @@
       "cuisineId": "7",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/french-onion-soup-1.jpg"
+      "image": "http://localhost:8080/uploads/french-onion-soup-1.jpg"
     },
     {
       "id": "10",
@@ -158,7 +146,7 @@
       "cuisineId": "8",
       "dietId": "2",
       "difficultyId": "1",
-      "image": "/uploads/greek-salad-index-642f292397bbf.jpg"
+      "image": "http://localhost:8080/uploads/greek-salad-index-642f292397bbf.jpg"
     },
     {
       "id": "11",
@@ -174,55 +162,37 @@
       "cuisineId": "9",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg"
+      "image": "http://localhost:8080/uploads/1200px-Phat_Thai_kung_Chang_Khien_street_stall.jpg"
     },
     {
       "id": "12",
       "name": "Butter Chicken",
-      "ingredients": [
-        "Chicken",
-        "Tomato Sauce",
-        "Cream",
-        "Butter",
-        "Spices"
-      ],
+      "ingredients": ["Chicken", "Tomato Sauce", "Cream", "Butter", "Spices"],
       "instructions": "Cook chicken with spices. Add tomato sauce and cream. Simmer until done.",
       "cuisineId": "4",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/butter-chicken-ac2ff98.jpg"
+      "image": "http://localhost:8080/uploads/butter-chicken-ac2ff98.jpg"
     },
     {
       "id": "13",
       "name": "Fish and Chips",
-      "ingredients": [
-        "Cod",
-        "Potatoes",
-        "Flour",
-        "Beer",
-        "Salt"
-      ],
+      "ingredients": ["Cod", "Potatoes", "Flour", "Beer", "Salt"],
       "instructions": "Batter and fry fish. Fry potatoes. Serve with salt.",
       "cuisineId": "10",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/Fish_and_chips_blackpool.jpg"
+      "image": "http://localhost:8080/uploads/Fish_and_chips_blackpool.jpg"
     },
     {
       "id": "14",
       "name": "Beef Stroganoff",
-      "ingredients": [
-        "Beef",
-        "Mushrooms",
-        "Onions",
-        "Sour Cream",
-        "Butter"
-      ],
+      "ingredients": ["Beef", "Mushrooms", "Onions", "Sour Cream", "Butter"],
       "instructions": "Cook beef and vegetables. Add sour cream. Serve with noodles.",
       "cuisineId": "11",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/16311-simple-beef-stroganoff-DDMFS-4x3.jpg"
+      "image": "http://localhost:8080/uploads/16311-simple-beef-stroganoff-DDMFS-4x3.jpg"
     },
     {
       "id": "15",
@@ -238,23 +208,17 @@
       "cuisineId": "1",
       "dietId": "3",
       "difficultyId": "2",
-      "image": "/uploads/eggplant-parmesan.jpg"
+      "image": "http://localhost:8080/uploads/eggplant-parmesan.jpg"
     },
     {
       "id": "16",
       "name": "Falafel",
-      "ingredients": [
-        "Chickpeas",
-        "Onion",
-        "Garlic",
-        "Parsley",
-        "Spices"
-      ],
+      "ingredients": ["Chickpeas", "Onion", "Garlic", "Parsley", "Spices"],
       "instructions": "Blend ingredients. Form into balls. Fry until golden.",
       "cuisineId": "12",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/Falafel.webp"
+      "image": "http://localhost:8080/uploads/Falafel.webp"
     },
     {
       "id": "17",
@@ -270,23 +234,17 @@
       "cuisineId": "5",
       "dietId": "4",
       "difficultyId": "2",
-      "image": "/uploads/Ramen.webp"
+      "image": "http://localhost:8080/uploads/Ramen.webp"
     },
     {
       "id": "18",
       "name": "Shakshuka",
-      "ingredients": [
-        "Tomatoes",
-        "Eggs",
-        "Onions",
-        "Bell Peppers",
-        "Spices"
-      ],
+      "ingredients": ["Tomatoes", "Eggs", "Onions", "Bell Peppers", "Spices"],
       "instructions": "Cook vegetables with spices. Add eggs. Simmer until eggs are set.",
       "cuisineId": "13",
       "dietId": "2",
       "difficultyId": "1",
-      "image": "/uploads/Shakshuka-main-1.webp"
+      "image": "http://localhost:8080/uploads/Shakshuka-main-1.webp"
     },
     {
       "id": "19",
@@ -302,39 +260,27 @@
       "cuisineId": "1",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/Chicken-Alfredo-bowl.jpg"
+      "image": "http://localhost:8080/uploads/Chicken-Alfredo-bowl.jpg"
     },
     {
       "id": "20",
       "name": "Bibimbap",
-      "ingredients": [
-        "Rice",
-        "Beef",
-        "Vegetables",
-        "Egg",
-        "Gochujang"
-      ],
+      "ingredients": ["Rice", "Beef", "Vegetables", "Egg", "Gochujang"],
       "instructions": "Cook rice. Arrange beef and vegetables on top. Add egg and sauce.",
       "cuisineId": "14",
       "dietId": "2",
       "difficultyId": "2",
-      "image": "/uploads/Bibimbap_3.webp"
+      "image": "http://localhost:8080/uploads/Bibimbap_3.webp"
     },
     {
       "id": "21",
       "name": "Pancakes",
-      "ingredients": [
-        "Flour",
-        "Milk",
-        "Eggs",
-        "Baking Powder",
-        "Sugar"
-      ],
+      "ingredients": ["Flour", "Milk", "Eggs", "Baking Powder", "Sugar"],
       "instructions": "Mix ingredients. Cook on griddle. Serve with syrup.",
       "cuisineId": "2",
       "dietId": "2",
       "difficultyId": "1",
-      "image": "/uploads/best-homemade-pancakes-index-640775a2dbad8.jpg"
+      "image": "http://localhost:8080/uploads/best-homemade-pancakes-index-640775a2dbad8.jpg"
     },
     {
       "id": "22",
@@ -350,7 +296,7 @@
       "cuisineId": "1",
       "dietId": "3",
       "difficultyId": "1",
-      "image": "/uploads/Pasta-Primavera-f.jpg"
+      "image": "http://localhost:8080/uploads/Pasta-Primavera-f.jpg"
     }
   ],
   "comments": [
