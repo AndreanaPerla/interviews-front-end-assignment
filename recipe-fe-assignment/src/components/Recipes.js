@@ -1,28 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
+import { DataContext } from "../context/DataContext";
 
 function Recipes() {
-  const [recipes, setRecipes] = useState([]);
+  const { recipes, getRecipes } = useContext(DataContext);
 
   useEffect(() => {
     getRecipes();
   }, []);
-
-  const getRecipes = async () => {
-    const check = localStorage.getItem("recipes");
-    if (check) {
-      setRecipes(JSON.parse(check));
-    } else {
-      const api = await fetch("http://localhost:8080/recipes");
-      const data = await api.json();
-
-      localStorage.setItem("recipes", JSON.stringify(data));
-
-      setRecipes(data);
-
-      // console.log(data);
-    }
-  };
 
   return (
     <Grid>
@@ -43,7 +28,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   column-gap: 3rem;
-  row-gap: 2rem;
+  row-gap: 3rem;
 `;
 const Card = styled.div`
   min-height: 20rem;
