@@ -1,12 +1,16 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { DataContext } from "../context/DataContext";
 
 function Recipes() {
-  const { recipes, getRecipes } = useContext(DataContext);
+  const { recipes, getRecipes, getCuisines, getDifficulties, getDiets } =
+    useContext(DataContext);
 
   useEffect(() => {
     getRecipes();
+    getCuisines();
+    getDifficulties();
+    getDiets();
   }, []);
 
   return (
@@ -26,12 +30,12 @@ function Recipes() {
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
   column-gap: 3rem;
   row-gap: 3rem;
 `;
 const Card = styled.div`
-  min-height: 20rem;
+  min-height: 15rem;
   overflow: hidden;
   position: relative;
 
@@ -61,7 +65,6 @@ const Card = styled.div`
     align-items: center;
   }
 `;
-
 const Gradient = styled.div`
   z-index: 3;
   position: absolute;

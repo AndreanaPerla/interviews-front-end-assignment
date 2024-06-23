@@ -1,13 +1,18 @@
 import DataContextProvider from "./context/DataContext";
-import Home from "./pages/Home";
+import Category from "./components/Category";
+import Pages from "./pages/Pages";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <DataContextProvider>
-      <div className="App">
-        <h1>Recipe app</h1>
-        <Home />
-      </div>
+      <BrowserRouter>
+        <div className="App">
+          <h1>Recipe app</h1>
+          <Category />
+          <Pages />
+        </div>
+      </BrowserRouter>
     </DataContextProvider>
   );
 }
