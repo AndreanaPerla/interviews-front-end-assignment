@@ -4,9 +4,12 @@ export const DataContext = createContext();
 
 function DataContextProvider({ children }) {
   const [recipes, setRecipes] = useState([]);
+
   const [cuisines, setCuisines] = useState([]);
   const [difficulties, setDifficulties] = useState([]);
+
   const [diets, setDiets] = useState([]);
+  const [dietList, setDietList] = useState([]);
 
   const getRecipes = async () => {
     const check = localStorage.getItem("recipes");
@@ -72,19 +75,33 @@ function DataContextProvider({ children }) {
     }
   };
 
+  const getDietList = async (dietId) => {
+    var diets = [];
+    for (var i = 0; i < recipes.length; i++) {
+      if (recipes[i].dietId === dietId) {
+        diets.push(recipes[i]);
+      }
+
+      setDietList(diets);
+    }
+  };
+
   const value = {
     recipes,
     cuisines,
     difficulties,
     diets,
+    dietList,
     setRecipes,
     setCuisines,
     setDifficulties,
     setDiets,
+    setDietList,
     getRecipes,
     getCuisines,
     getDifficulties,
     getDiets,
+    getDietList,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

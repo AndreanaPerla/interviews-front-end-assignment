@@ -31,8 +31,7 @@ function Recipes() {
 const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-  column-gap: 3rem;
-  row-gap: 3rem;
+  grid-gap: 3rem;
 `;
 const Card = styled.div`
   min-height: 15rem;
