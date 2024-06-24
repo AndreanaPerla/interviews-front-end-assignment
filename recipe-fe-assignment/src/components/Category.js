@@ -5,22 +5,50 @@ import { DataContext } from "../context/DataContext";
 import React, { useContext, useEffect, useState } from "react";
 
 function Category() {
-  const { diets } = useContext(DataContext);
+  const { diets, cuisines, difficulties } = useContext(DataContext);
 
   return (
-    <List>
-      {diets.map((item) => {
-        return (
-          <SLink
-            key={item.name}
-            to={`/diets/${item.name}`}
-            state={`${item.id}`}
-          >
-            <h4>{item.name}</h4>
-          </SLink>
-        );
-      })}
-    </List>
+    <div>
+      <List>
+        {diets.map((item) => {
+          return (
+            <SLink
+              key={item.name}
+              to={`/diets/${item.name}`}
+              state={`${item.id}`}
+            >
+              <h4>{item.name}</h4>
+            </SLink>
+          );
+        })}
+      </List>
+      <List>
+        {cuisines.map((item) => {
+          return (
+            <SLink
+              key={item.name}
+              to={`/cuisines/${item.name}`}
+              state={`${item.id}`}
+            >
+              <h4>{item.name}</h4>
+            </SLink>
+          );
+        })}
+      </List>
+      <List>
+        {difficulties.map((item) => {
+          return (
+            <SLink
+              key={item.name}
+              to={`/difficulties/${item.name}`}
+              state={`${item.id}`}
+            >
+              <h4>{item.name}</h4>
+            </SLink>
+          );
+        })}
+      </List>
+    </div>
   );
 }
 

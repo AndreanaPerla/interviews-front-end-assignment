@@ -6,7 +6,10 @@ function DataContextProvider({ children }) {
   const [recipes, setRecipes] = useState([]);
 
   const [cuisines, setCuisines] = useState([]);
+  const [cuisinesList, setCuisinesList] = useState([]);
+
   const [difficulties, setDifficulties] = useState([]);
+  const [difficultiesList, setDifficultiesList] = useState([]);
 
   const [diets, setDiets] = useState([]);
   const [dietList, setDietList] = useState([]);
@@ -43,6 +46,17 @@ function DataContextProvider({ children }) {
     }
   };
 
+  const getCuisinesList = async (cuisineId) => {
+    var cuisines = [];
+    for (var i = 0; i < recipes.length; i++) {
+      if (recipes[i].cuisineId === cuisineId) {
+        cuisines.push(recipes[i]);
+      }
+
+      setCuisinesList(cuisines);
+    }
+  };
+
   const getDifficulties = async () => {
     const check = localStorage.getItem("difficulties");
     if (check) {
@@ -56,6 +70,17 @@ function DataContextProvider({ children }) {
       setDifficulties(data);
 
       console.log("DIFFICULTIES", data);
+    }
+  };
+
+  const getDifficultiesList = async (difficultyId) => {
+    var difficulties = [];
+    for (var i = 0; i < recipes.length; i++) {
+      if (recipes[i].difficultyId === difficultyId) {
+        difficulties.push(recipes[i]);
+      }
+
+      setDifficultiesList(difficulties);
     }
   };
 
@@ -89,12 +114,16 @@ function DataContextProvider({ children }) {
   const value = {
     recipes,
     cuisines,
+    cuisinesList,
     difficulties,
+    difficultiesList,
     diets,
     dietList,
     setRecipes,
     setCuisines,
+    setCuisinesList,
     setDifficulties,
+    setDifficultiesList,
     setDiets,
     setDietList,
     getRecipes,
@@ -102,6 +131,8 @@ function DataContextProvider({ children }) {
     getDifficulties,
     getDiets,
     getDietList,
+    getCuisinesList,
+    getDifficultiesList,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
