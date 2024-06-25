@@ -113,11 +113,42 @@ function DataContextProvider({ children }) {
     }
   };
 
-  const getSearched = async (search) => {
-    let term = search.charAt(0).toUpperCase() + search.slice(1);
-    const searchedArray = recipes.filter((el) => el.name === term);
+  // const getSearched = async (search) => {
+  //   let term = search.charAt(0).toUpperCase() + search.slice(1);
+  //   const searchedArray = recipes.filter((el) => el.name === term);
 
-    setSearched(searchedArray);
+  //   setSearched(searchedArray);
+  // };
+
+  const getSearched = (query) => {
+    var searchedArray = new Set();
+    for (var i = 0; i < recipes.length; i++) {
+      var data = recipes[i].name;
+
+      var dataWords =
+        typeof data == "string" &&
+        data
+          ?.split(" ")
+          ?.map((b) => b && b.toLowerCase().trim())
+          .filter((b) => b);
+
+      var searchWords =
+        typeof query == "string" &&
+        query
+          ?.split(" ")
+          .map((b) => b && b.toLowerCase().trim())
+          .filter((b) => b);
+
+      searchWords.filter((word) => {
+        if (dataWords.includes(word)) {
+          console.log(recipes[i]);
+
+          searchedArray.add(recipes[i]);
+        }
+      });
+    }
+
+    setSearched(Array.from(searchedArray));
   };
 
   const value = {
