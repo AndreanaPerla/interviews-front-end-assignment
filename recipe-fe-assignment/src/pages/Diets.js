@@ -60,6 +60,7 @@ const Card = styled.div`
     color: white;
     width: 100%;
     text-align: center;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;

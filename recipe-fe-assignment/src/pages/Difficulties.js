@@ -1,21 +1,21 @@
-import React, { useContext, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
+import { Link, useParams, useLocation } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 
-function Recipes() {
-  const { recipes, getRecipes, getCuisines, getDifficulties, getDiets } =
-    useContext(DataContext);
+function Difficulties() {
+  const { difficultiesList, getDifficultiesList } = useContext(DataContext);
+  let params = useParams();
+  let location = useLocation();
 
   useEffect(() => {
-    getRecipes();
-    getCuisines();
-    getDifficulties();
-    getDiets();
-  }, []);
+    getDifficultiesList(location.state);
+  }, [params.type]);
 
   return (
     <Grid>
-      {recipes.map((item) => {
+      {difficultiesList.map((item) => {
         return (
           <Card key={item.id}>
             <img src={item.image} alt={item.name} />
@@ -29,8 +29,9 @@ function Recipes() {
 }
 
 const Grid = styled.div`
+  margin: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
   grid-gap: 3rem;
 `;
 const Card = styled.div`
@@ -74,4 +75,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export default Recipes;
+export default Difficulties;

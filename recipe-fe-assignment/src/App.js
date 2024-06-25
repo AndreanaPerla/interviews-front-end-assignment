@@ -2,13 +2,14 @@ import DataContextProvider from "./context/DataContext";
 import Category from "./components/Category";
 import Pages from "./pages/Pages";
 import { BrowserRouter } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <DataContextProvider>
       <BrowserRouter>
         <div className="App">
-          <h1>Recipe app</h1>
+          <Navbar />
           <Category />
           <Pages />
         </div>

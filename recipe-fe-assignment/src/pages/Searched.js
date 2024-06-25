@@ -1,21 +1,19 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { Link, useParams, useLocation } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
+import { useParams, useLocation } from "react-router-dom";
 
-function Cuisines() {
-  const { cuisinesList, getCuisinesList } = useContext(DataContext);
-  let params = useParams();
-  let location = useLocation();
+function Searched() {
+  const { searched, getSearched } = useContext(DataContext);
+  const params = useParams();
 
   useEffect(() => {
-    getCuisinesList(location.state);
-  }, [params.type]);
+    getSearched(params.search);
+  }, [params.search]);
 
   return (
     <Grid>
-      {cuisinesList.map((item) => {
+      {searched.map((item) => {
         return (
           <Card key={item.id}>
             <img src={item.image} alt={item.name} />
@@ -60,6 +58,7 @@ const Card = styled.div`
     color: white;
     width: 100%;
     text-align: center;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,4 +73,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export default Cuisines;
+export default Searched;

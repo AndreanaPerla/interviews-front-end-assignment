@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import { Link, useParams, useLocation } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 
-function Difficulties() {
-  const { difficultiesList, getDifficultiesList } = useContext(DataContext);
+function Cuisines() {
+  const { cuisinesList, getCuisinesList } = useContext(DataContext);
   let params = useParams();
   let location = useLocation();
 
   useEffect(() => {
-    getDifficultiesList(location.state);
+    getCuisinesList(location.state);
   }, [params.type]);
 
   return (
     <Grid>
-      {difficultiesList.map((item) => {
+      {cuisinesList.map((item) => {
         return (
           <Card key={item.id}>
             <img src={item.image} alt={item.name} />
@@ -60,6 +60,7 @@ const Card = styled.div`
     color: white;
     width: 100%;
     text-align: center;
+    font-size: 18px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,4 +75,4 @@ const Gradient = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
 `;
 
-export default Difficulties;
+export default Cuisines;

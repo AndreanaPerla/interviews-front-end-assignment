@@ -130,10 +130,8 @@ const List = styled.div`
 `;
 
 const SLink = styled(NavLink)`
-  // border-radius: 2rem;
   margin-right: 1rem;
   text-decoration: none;
-  // background: linear-gradient(35deg, #494949, #313131);
   padding: 0.5rem 0rem;
   color: #494949;
   cursor: pointer;
@@ -146,7 +144,6 @@ const SLink = styled(NavLink)`
     background: -webkit-linear-gradient(#f27121, #e94057);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    // color: linear-gradient(to right, #f27121, #e94057);
   }
 `;
 

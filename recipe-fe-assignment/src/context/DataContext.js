@@ -14,6 +14,8 @@ function DataContextProvider({ children }) {
   const [diets, setDiets] = useState([]);
   const [dietList, setDietList] = useState([]);
 
+  const [searched, setSearched] = useState([]);
+
   const getRecipes = async () => {
     const check = localStorage.getItem("recipes");
     if (check) {
@@ -111,6 +113,13 @@ function DataContextProvider({ children }) {
     }
   };
 
+  const getSearched = async (search) => {
+    let term = search.charAt(0).toUpperCase() + search.slice(1);
+    const searchedArray = recipes.filter((el) => el.name === term);
+
+    setSearched(searchedArray);
+  };
+
   const value = {
     recipes,
     cuisines,
@@ -119,6 +128,7 @@ function DataContextProvider({ children }) {
     difficultiesList,
     diets,
     dietList,
+    searched,
     setRecipes,
     setCuisines,
     setCuisinesList,
@@ -126,6 +136,7 @@ function DataContextProvider({ children }) {
     setDifficultiesList,
     setDiets,
     setDietList,
+    setSearched,
     getRecipes,
     getCuisines,
     getDifficulties,
@@ -133,6 +144,7 @@ function DataContextProvider({ children }) {
     getDietList,
     getCuisinesList,
     getDifficultiesList,
+    getSearched,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
