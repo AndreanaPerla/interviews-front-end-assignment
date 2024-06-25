@@ -1,5 +1,5 @@
 import Recipes from "../components/Recipes";
-import styled from "styled-components";
+import Wrapper from "../utils/Wrapper";
 
 import React from "react";
 
@@ -10,9 +10,5 @@ function Home() {
     </Wrapper>
   );
 }
-
-const Wrapper = styled.div`
-  margin: 3rem;
-`;
 
 export default Home;

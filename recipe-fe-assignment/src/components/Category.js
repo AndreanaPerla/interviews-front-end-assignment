@@ -1,10 +1,12 @@
-import styled from "styled-components";
+import Categories from "../utils/Categories";
+import Button from "../utils/Button";
+import List from "../utils/List";
+import SLink from "../utils/SLink";
 import { FaArrowUpRightDots, FaBowlFood } from "react-icons/fa6";
 import { BiWorld } from "react-icons/bi";
-import { NavLink } from "react-router-dom";
 import { DataContext } from "../context/DataContext";
 
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 
 function Category() {
   const { diets, cuisines, difficulties } = useContext(DataContext);
@@ -79,72 +81,5 @@ function Category() {
     </Categories>
   );
 }
-
-const Categories = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 3rem;
-`;
-
-const Button = styled.button`
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 1.5rem 5rem;
-  border-radius: 3rem;
-  border: none;
-  background: linear-gradient(to right, #f27121, #e94057);
-  color: white;
-  font-size: 18px;
-  font-weight: 700;
-
-  p {
-    padding-left: 5px;
-    margin: 0;
-  }
-
-  @media (max-width: 768px) {
-    padding: 1rem 3rem;
-    border-radius: 2rem;
-  }
-
-  @media (max-width: 600px) {
-    padding: 1rem 1rem;
-
-    p {
-      display: none;
-    }
-  }
-`;
-
-const List = styled.div`
-  z-index: 20;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-`;
-
-const SLink = styled(NavLink)`
-  margin-right: 1rem;
-  text-decoration: none;
-  padding: 0.5rem 0rem;
-  color: #494949;
-  cursor: pointer;
-
-  h4 {
-    margin: 0;
-  }
-
-  &.active {
-    background: -webkit-linear-gradient(#f27121, #e94057);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-`;
 
 export default Category;
