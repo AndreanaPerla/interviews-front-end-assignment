@@ -4,7 +4,7 @@ const Button = styled.button`
   position: relative;
   display: flex;
   align-items: center;
-  padding: 1.5rem 5rem;
+  padding: 1rem 4rem;
   border-radius: 3rem;
   border: none;
   background: linear-gradient(to right, #f27121, #e94057);

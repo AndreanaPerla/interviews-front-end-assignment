@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-  min-height: 15rem;
+  min-height: 20rem;
   overflow: hidden;
   position: relative;
 
