@@ -6,6 +6,7 @@ import Diets from "./Diets";
 import Cuisines from "./Cuisines";
 import Difficulties from "./Difficulties";
 import Searched from "./Searched";
+import Recipe from "./Recipe";
 
 function Pages() {
   return (
@@ -15,6 +16,7 @@ function Pages() {
       <Route path="/cuisines/:type" element={<Cuisines />} />
       <Route path="/difficulties/:type" element={<Difficulties />} />
       <Route path="/searched/:search/" element={<Searched />} />
+      <Route path="/recipe/:id" element={<Recipe />} />
     </Routes>
   );
 }

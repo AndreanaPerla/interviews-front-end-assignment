@@ -16,6 +16,8 @@ function DataContextProvider({ children }) {
 
   const [searched, setSearched] = useState([]);
 
+  const [details, setDetails] = useState({});
+
   const getRecipes = async () => {
     const check = localStorage.getItem("recipes");
     if (check) {
@@ -113,13 +115,6 @@ function DataContextProvider({ children }) {
     }
   };
 
-  // const getSearched = async (search) => {
-  //   let term = search.charAt(0).toUpperCase() + search.slice(1);
-  //   const searchedArray = recipes.filter((el) => el.name === term);
-
-  //   setSearched(searchedArray);
-  // };
-
   const getSearched = (query) => {
     var searchedArray = new Set();
     for (var i = 0; i < recipes.length; i++) {
@@ -151,6 +146,13 @@ function DataContextProvider({ children }) {
     setSearched(Array.from(searchedArray));
   };
 
+  const getDetails = async (id) => {
+    const api = await fetch(`http://localhost:8080/recipes/${id}`);
+    const data = await api.json();
+
+    setDetails(data);
+  };
+
   const value = {
     recipes,
     cuisines,
@@ -160,6 +162,7 @@ function DataContextProvider({ children }) {
     diets,
     dietList,
     searched,
+    details,
     setRecipes,
     setCuisines,
     setCuisinesList,
@@ -168,6 +171,7 @@ function DataContextProvider({ children }) {
     setDiets,
     setDietList,
     setSearched,
+    setDetails,
     getRecipes,
     getCuisines,
     getDifficulties,
@@ -176,6 +180,7 @@ function DataContextProvider({ children }) {
     getCuisinesList,
     getDifficultiesList,
     getSearched,
+    getDetails,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;

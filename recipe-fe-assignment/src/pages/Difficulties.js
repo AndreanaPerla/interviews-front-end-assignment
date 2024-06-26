@@ -22,9 +22,11 @@ function Difficulties() {
         {difficultiesList.map((item) => {
           return (
             <Card key={item.id}>
-              <img src={item.image} alt={item.name} />
-              <h4>{item.name}</h4>
-              <Gradient />
+              <Link to={"/recipe/" + item.id}>
+                <img src={item.image} alt={item.name} />
+                <h4>{item.name}</h4>
+                <Gradient />
+              </Link>
             </Card>
           );
         })}

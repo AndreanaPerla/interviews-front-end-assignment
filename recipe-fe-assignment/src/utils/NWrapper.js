@@ -5,6 +5,10 @@ const NWrapper = styled.div`
   display: flex;
   align-items: center;
 
+  @media (min-width: 1700px) {
+    margin: 3rem 9rem;
+  }
+
   @media (max-width: 768px) {
     margin: 2rem 20px;
   }

@@ -6,7 +6,7 @@ import Search from "./Search";
 function Navbar() {
   return (
     <NWrapper>
-      <NLink to={`/`}>Recipe app</NLink>
+      <NLink to={`/`}>Recipe</NLink>
       <Search />
     </NWrapper>
   );

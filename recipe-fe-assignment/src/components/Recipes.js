@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Grid from "../utils/Grid";
 import Card from "../utils/Card";
 import Gradient from "../utils/Gradient";
@@ -20,9 +21,11 @@ function Recipes() {
       {recipes.map((item) => {
         return (
           <Card key={item.id}>
-            <img src={item.image} alt={item.name} />
-            <h4>{item.name}</h4>
-            <Gradient />
+            <Link to={"/recipe/" + item.id}>
+              <img src={item.image} alt={item.name} />
+              <h4>{item.name}</h4>
+              <Gradient />
+            </Link>
           </Card>
         );
       })}
