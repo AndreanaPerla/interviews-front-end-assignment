@@ -5,6 +5,7 @@ import Gradient from "../utils/Gradient";
 import { DataContext } from "../context/DataContext";
 import { useParams, useLocation, Link } from "react-router-dom";
 import Wrapper from "../utils/Wrapper";
+import { motion } from "framer-motion";
 
 function Searched() {
   const { searched, getSearched } = useContext(DataContext);
@@ -16,7 +17,12 @@ function Searched() {
 
   return (
     <Wrapper>
-      <Grid>
+      <Grid
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         {searched.map((item) => {
           return (
             <Card key={item.id}>

@@ -18,7 +18,12 @@ function Cuisines() {
 
   return (
     <Wrapper>
-      <Grid>
+      <Grid
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         {cuisinesList.map((item) => {
           return (
             <Card key={item.id}>

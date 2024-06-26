@@ -6,13 +6,20 @@ import { FaArrowUpRightDots, FaBowlFood } from "react-icons/fa6";
 import { BiWorld } from "react-icons/bi";
 import { DataContext } from "../context/DataContext";
 
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 function Category() {
-  const { diets, cuisines, difficulties } = useContext(DataContext);
-  const [openDiets, setOpenDiets] = useState(false);
-  const [openCousines, setOpenCousines] = useState(false);
-  const [openDifficulty, setOpenDifficulty] = useState(false);
+  const {
+    diets,
+    cuisines,
+    difficulties,
+    openDiets,
+    setOpenDiets,
+    openCousines,
+    setOpenCousines,
+    openDifficulty,
+    setOpenDifficulty,
+  } = useContext(DataContext);
 
   return (
     <Categories>
@@ -26,6 +33,7 @@ function Category() {
             {diets.map((item) => {
               return (
                 <SLink
+                  onClick={() => setOpenDiets(!openDiets)}
                   key={item.name}
                   to={`/diets/${item.name}`}
                   state={`${item.id}`}
@@ -47,6 +55,7 @@ function Category() {
             {cuisines.map((item) => {
               return (
                 <SLink
+                  onClick={() => setOpenCousines(!openCousines)}
                   key={item.name}
                   to={`/cuisines/${item.name}`}
                   state={`${item.id}`}
@@ -67,6 +76,7 @@ function Category() {
             {difficulties.map((item) => {
               return (
                 <SLink
+                  onClick={() => setOpenDifficulty(!openDifficulty)}
                   key={item.name}
                   to={`/difficulties/${item.name}`}
                   state={`${item.id}`}

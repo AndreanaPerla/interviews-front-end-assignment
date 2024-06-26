@@ -18,6 +18,10 @@ function DataContextProvider({ children }) {
 
   const [details, setDetails] = useState({});
 
+  const [openDiets, setOpenDiets] = useState(false);
+  const [openCousines, setOpenCousines] = useState(false);
+  const [openDifficulty, setOpenDifficulty] = useState(false);
+
   const getRecipes = async () => {
     const check = localStorage.getItem("recipes");
     if (check) {
@@ -163,6 +167,9 @@ function DataContextProvider({ children }) {
     dietList,
     searched,
     details,
+    openDiets,
+    openDifficulty,
+    openCousines,
     setRecipes,
     setCuisines,
     setCuisinesList,
@@ -181,6 +188,9 @@ function DataContextProvider({ children }) {
     getDifficultiesList,
     getSearched,
     getDetails,
+    setOpenDiets,
+    setOpenCousines,
+    setOpenDifficulty,
   };
 
   return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
